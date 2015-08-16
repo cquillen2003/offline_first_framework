@@ -8,6 +8,14 @@ angular.module('myApp', [
   'myApp.version'
 ])
 
-.config(['$urlRouterProvider', function($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/view1');
+.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+
+	$urlRouterProvider.otherwise('/view1');
+
+	$stateProvider
+		.state('nav', {
+			url: '',
+			templateUrl: 'layout/navbar.html'
+		});
+
 }]);
