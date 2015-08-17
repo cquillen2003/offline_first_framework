@@ -5,10 +5,12 @@ angular.module('myApp', [
   'ui.router',
   'myApp.users.routes',
   'myApp.view2',
-  'myApp.version'
+  'myApp.version',
+  'myApp.store',
+  'myApp.pouch'
 ])
 
-.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+.config(function($urlRouterProvider, $stateProvider) {
 
 	$urlRouterProvider.otherwise('/view1');
 
@@ -18,4 +20,4 @@ angular.module('myApp', [
 			templateUrl: 'layout/navbar.html'
 		});
 
-}]);
+});

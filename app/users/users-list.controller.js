@@ -2,10 +2,12 @@
 
 angular.module('myApp.users.list', [])
 
-.controller('UsersListCtrl', ['$scope', function($scope) {
+.controller('UsersListCtrl', ['$scope', 'store', function($scope, store) {
 
-	$scope.users = [
-		{ name: 'Corey', email: 'dontworrryaboutit'}
-	];
+	store.findAll('user').then(function(res) {
+		console.log(res);
+		$scope.users = res.docs;
+		$scope.$apply(); 
+	});
 
 }]);

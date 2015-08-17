@@ -2,10 +2,15 @@
 
 angular.module('myApp.users.form', [])
 
-.controller('UsersFormCtrl', ['$scope', function($scope) {
+.controller('UsersFormCtrl', ['$scope', 'store', function($scope, store) {
 
-	$scope.users = [
-		{ name: 'Corey', email: 'dontworrryaboutit'}
-	];
+	$scope.user = {
+		type: 'user'
+	};
+
+	$scope.createUser = function() {
+		console.log($scope.user)
+		store.create($scope.user);
+	}
 
 }]);
