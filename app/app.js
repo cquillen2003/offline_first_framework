@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version',
   'myApp.store',
-  'myApp.pouch'
+  'myApp.pouch',
+  'myApp.couch'
 ])
 
 .config(function($urlRouterProvider, $stateProvider) {

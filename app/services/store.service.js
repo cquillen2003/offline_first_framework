@@ -10,8 +10,6 @@ angular.module('myApp.store', [])
 
 	var db = Pouch.db;
 
-	console.log(db)
-
 	return {
 		findAll: function(type) {
 			console.log('find all')
